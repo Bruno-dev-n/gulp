@@ -1,0 +1,127 @@
+$cor1:#F79F1F;
+$cor2:#FFC312;
+$cor3:#ffeaaa;
+$font:'Recursive';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font, cursive;
+}
+
+button.navbar-toggler{
+    background-color: $cor1;
+}
+.navbar-toggler:focus{
+    background-color: #F79F1F;
+}
+button.navbar-toggler.justify-itens{
+    background-color: #F79F1F;
+}
+/*
+ul.navbar-nav{
+    background-color: #FFC312;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}*/
+.c-inicio img{
+        margin: 0 auto;
+        max-width: 50%;
+        padding: 0 2% 2% 2%;
+}
+.content{
+    z-index: -2;
+}
+#lazer{
+    margin: 0 auto;
+    .container.row{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .imagens{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    img{
+        max-width: 30%;
+        object-fit: cover;
+        margin-bottom: 2%;
+    }
+}
+footer{
+    background-color: #FFC312;
+    .container{
+        background-color: #FFC312;
+    }
+}
+@keyframes navbar {
+    0% {
+        transform: translateY(-100%);
+        
+    }
+    25% {
+        transform: translateY(-75%);
+        
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    75% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@media(max-width:767px){
+    .c-inicio{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        img{
+            max-width:80%;
+            padding: 0;
+            z-index: -5;
+        }
+
+    }
+    .container.row{
+        text-align: center;
+        .imagens{
+            margin: 0 auto;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        img{
+            max-width: 80%;
+            object-fit: cover;
+            margin-bottom: 2%;
+        }
+    }
+    footer{
+        text-align: center;
+    }
+}
+@media (max-width:1023px) {
+    button.navbar-toggler.justify-itens{
+        background-color: #F79F1F;
+        z-index: -4;
+    }
+    ul.navbar-nav {
+        background-color: #FFC312;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        animation: navbar 1s ease-out forwards;
+        border-radius: 5px;
+        border: 1px dashed #F79F1F;
+        z-index: -1;
+    }
+    .c-inicio img{
+        z-index: -5;
+    }
+}
+
+
